@@ -1,6 +1,6 @@
 [gd_resource type="Theme" load_steps=17 format=3 uid="uid://cjmmsi2fu2c56"]
 
-[ext_resource type="FontFile" uid="uid://diu0ao8hhmujk" path="res://Common/PressStart2P-Regular.ttf" id="1_ib5sv"]
+[ext_resource type="FontFile" uid="uid://dfrjafp72igi0" path="res://Assets/PressStart2PFont/PressStart2P-Regular.ttf" id="1_1y2ip"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ib5sv"]
 
@@ -85,7 +85,7 @@ thickness = 2
 vertical = true
 
 [resource]
-default_font = ExtResource("1_ib5sv")
+default_font = ExtResource("1_1y2ip")
 Button/styles/focus = SubResource("StyleBoxEmpty_ib5sv")
 Button/styles/hover = SubResource("StyleBoxFlat_eaxl7")
 Button/styles/normal = SubResource("StyleBoxFlat_ib5sv")
