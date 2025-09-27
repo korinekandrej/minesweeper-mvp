@@ -1,0 +1,33 @@
+[gd_scene load_steps=2 format=3 uid="uid://ck5yoqvewnrqh"]
+
+[ext_resource type="Script" uid="uid://d4d7iu3lvsiij" path="res://Main/MainView.cs" id="1_6ww0r"]
+
+[node name="MainView" type="Node"]
+script = ExtResource("1_6ww0r")
+
+[node name="GlobalBackgroundLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="GlobalBackgroundLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.584314, 0.584314, 0.584314, 1)
+
+[node name="ScreenViewLayer" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+
+[node name="ViewTransition" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+
+[node name="DissolveRect" type="ColorRect" parent="ViewTransition"]
+unique_name_in_owner = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.584314, 0.584314, 0.584314, 1)

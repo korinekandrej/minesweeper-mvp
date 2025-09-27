@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://d1ehc223djpd1"]
+
+[ext_resource type="Theme" uid="uid://cjmmsi2fu2c56" path="res://Common/MainTheme.tres" id="1_xyv2t"]
+[ext_resource type="Script" uid="uid://qriwcig3ecnn" path="res://Main/GameSession/SessionEndNotification.cs" id="1_yyrds"]
+
+[node name="SessionEndNotification" type="MarginContainer"]
+theme = ExtResource("1_xyv2t")
+script = ExtResource("1_yyrds")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 2
+mouse_filter = 1
+
+[node name="Label" type="Label" parent="PanelContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "You won
+12s 785ms
+[24s 102ms]"
+horizontal_alignment = 1

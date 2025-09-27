@@ -1,0 +1,24 @@
+[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://djgou6sqh5il2"]
+
+[ext_resource type="Texture2D" uid="uid://dwhy1web60vnb" path="res://Assets/MinesweeperTiles_v2.png" id="1_mf58x"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_r7t62"]
+texture = ExtResource("1_mf58x")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+0:3/0 = 0
+
+[resource]
+tile_size = Vector2i(32, 32)
+sources/1 = SubResource("TileSetAtlasSource_r7t62")

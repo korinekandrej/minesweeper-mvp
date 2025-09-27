@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35506.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinesweeperMVP", "MinesweeperMVP.Godot\MinesweeperMVP.csproj", "{94F4BA05-73EC-415A-B925-CAD8D6760692}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinesweeperMVP.Domain", "MinesweeperMVP.Domain\MinesweeperMVP.Domain.csproj", "{634F7FFA-E17E-4385-91D9-E80FFD70C034}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinesweeperMVP.Application", "MinesweeperMVP.Application\MinesweeperMVP.Application.csproj", "{D0974AD1-2CA6-4C21-AE24-A61FC8E008E1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		ExportDebug|Any CPU = ExportDebug|Any CPU
+		ExportRelease|Any CPU = ExportRelease|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{94F4BA05-73EC-415A-B925-CAD8D6760692}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94F4BA05-73EC-415A-B925-CAD8D6760692}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94F4BA05-73EC-415A-B925-CAD8D6760692}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
+		{94F4BA05-73EC-415A-B925-CAD8D6760692}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
+		{94F4BA05-73EC-415A-B925-CAD8D6760692}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
+		{94F4BA05-73EC-415A-B925-CAD8D6760692}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
+		{634F7FFA-E17E-4385-91D9-E80FFD70C034}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{634F7FFA-E17E-4385-91D9-E80FFD70C034}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{634F7FFA-E17E-4385-91D9-E80FFD70C034}.ExportDebug|Any CPU.ActiveCfg = Debug|Any CPU
+		{634F7FFA-E17E-4385-91D9-E80FFD70C034}.ExportDebug|Any CPU.Build.0 = Debug|Any CPU
+		{634F7FFA-E17E-4385-91D9-E80FFD70C034}.ExportRelease|Any CPU.ActiveCfg = Release|Any CPU
+		{634F7FFA-E17E-4385-91D9-E80FFD70C034}.ExportRelease|Any CPU.Build.0 = Release|Any CPU
+		{D0974AD1-2CA6-4C21-AE24-A61FC8E008E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0974AD1-2CA6-4C21-AE24-A61FC8E008E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0974AD1-2CA6-4C21-AE24-A61FC8E008E1}.ExportDebug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0974AD1-2CA6-4C21-AE24-A61FC8E008E1}.ExportDebug|Any CPU.Build.0 = Debug|Any CPU
+		{D0974AD1-2CA6-4C21-AE24-A61FC8E008E1}.ExportRelease|Any CPU.ActiveCfg = Release|Any CPU
+		{D0974AD1-2CA6-4C21-AE24-A61FC8E008E1}.ExportRelease|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

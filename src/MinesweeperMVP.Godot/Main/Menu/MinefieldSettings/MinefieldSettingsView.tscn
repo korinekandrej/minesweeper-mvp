@@ -1,0 +1,103 @@
+[gd_scene load_steps=3 format=3 uid="uid://d4lcrae4r6oaw"]
+
+[ext_resource type="Script" uid="uid://dsc3q17ctveho" path="res://Main/Menu/MinefieldSettings/MinefieldSettingsView.cs" id="1_gxg6v"]
+[ext_resource type="Theme" uid="uid://cjmmsi2fu2c56" path="res://Common/MainTheme.tres" id="1_lkq2k"]
+
+[node name="MinefieldSettingsView" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -832.0
+offset_bottom = -510.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme = ExtResource("1_lkq2k")
+script = ExtResource("1_gxg6v")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Presets"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="EasyPresetButton" type="Button" parent="VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Easy"
+
+[node name="MediumPresetButton" type="Button" parent="VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Medium"
+
+[node name="HardPresetButton" type="Button" parent="VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Hard"
+
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="GridContainer" type="GridContainer" parent="VBoxContainer/MarginContainer2"]
+layout_mode = 2
+columns = 3
+
+[node name="RowsLabel" type="Label" parent="VBoxContainer/MarginContainer2/GridContainer"]
+layout_mode = 2
+text = "Rows"
+horizontal_alignment = 1
+
+[node name="ColumnsLabel" type="Label" parent="VBoxContainer/MarginContainer2/GridContainer"]
+layout_mode = 2
+text = "Columns"
+horizontal_alignment = 1
+
+[node name="MinesLabel" type="Label" parent="VBoxContainer/MarginContainer2/GridContainer"]
+layout_mode = 2
+text = "Mines"
+horizontal_alignment = 1
+
+[node name="RowsSpinBox" type="SpinBox" parent="VBoxContainer/MarginContainer2/GridContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+min_value = 1.0
+value = 10.0
+alignment = 1
+
+[node name="ColumnsSpinBox" type="SpinBox" parent="VBoxContainer/MarginContainer2/GridContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+min_value = 1.0
+value = 10.0
+alignment = 1
+
+[node name="MinesSpinBox" type="SpinBox" parent="VBoxContainer/MarginContainer2/GridContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+min_value = 1.0
+value = 5.0
+alignment = 1

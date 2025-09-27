@@ -1,0 +1,62 @@
+[gd_scene load_steps=3 format=3 uid="uid://r8gjwlpgsbhc"]
+
+[ext_resource type="Script" uid="uid://bv7jvbkrrcvww" path="res://Main/HighscoreBoard/HighscoreBoardView.cs" id="1_l2ut0"]
+[ext_resource type="Theme" uid="uid://cjmmsi2fu2c56" path="res://Common/MainTheme.tres" id="2_rpva6"]
+
+[node name="HighscoreListingView" type="Node"]
+script = ExtResource("1_l2ut0")
+
+[node name="UILayer" type="CanvasLayer" parent="."]
+
+[node name="UIRoot" type="Control" parent="UILayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_rpva6")
+
+[node name="CenterContainer" type="CenterContainer" parent="UILayer/UIRoot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="UILayer/UIRoot/CenterContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UILayer/UIRoot/CenterContainer/PanelContainer"]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="UILayer/UIRoot/CenterContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+text = "Highscores"
+horizontal_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="UILayer/UIRoot/CenterContainer/PanelContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="UILayer/UIRoot/CenterContainer/PanelContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="UILayer/UIRoot/CenterContainer/PanelContainer/VBoxContainer/MarginContainer/ScrollContainer"]
+layout_mode = 2
+theme_override_constants/margin_right = 5
+
+[node name="HighscoreList" type="VBoxContainer" parent="UILayer/UIRoot/CenterContainer/PanelContainer/VBoxContainer/MarginContainer/ScrollContainer/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="BackToMenuButton" type="Button" parent="UILayer/UIRoot/CenterContainer/PanelContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Back To Menu"

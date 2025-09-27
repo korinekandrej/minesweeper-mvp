@@ -1,0 +1,63 @@
+[gd_scene load_steps=5 format=3 uid="uid://dors5u3fdsgj3"]
+
+[ext_resource type="Script" uid="uid://crita61m16vk8" path="res://Main/Menu/MenuView.cs" id="1_uepuq"]
+[ext_resource type="Theme" uid="uid://cjmmsi2fu2c56" path="res://Common/MainTheme.tres" id="2_pechn"]
+[ext_resource type="PackedScene" uid="uid://d4lcrae4r6oaw" path="res://Main/Menu/MinefieldSettings/MinefieldSettingsView.tscn" id="2_ypwex"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_pechn"]
+font_size = 26
+
+[node name="MenuView" type="Node"]
+script = ExtResource("1_uepuq")
+
+[node name="UILayer" type="CanvasLayer" parent="."]
+
+[node name="UIRoot" type="Control" parent="UILayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_pechn")
+
+[node name="CenterContainer" type="CenterContainer" parent="UILayer/UIRoot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="UILayer/UIRoot/CenterContainer"]
+layout_mode = 2
+
+[node name="MainContent" type="VBoxContainer" parent="UILayer/UIRoot/CenterContainer/PanelContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="TitleLabel" type="Label" parent="UILayer/UIRoot/CenterContainer/PanelContainer/MainContent"]
+layout_mode = 2
+text = "Minesweeper"
+label_settings = SubResource("LabelSettings_pechn")
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="UILayer/UIRoot/CenterContainer/PanelContainer/MainContent"]
+layout_mode = 2
+
+[node name="MinefieldSettingsView" parent="UILayer/UIRoot/CenterContainer/PanelContainer/MainContent" instance=ExtResource("2_ypwex")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="HSeparator2" type="HSeparator" parent="UILayer/UIRoot/CenterContainer/PanelContainer/MainContent"]
+layout_mode = 2
+
+[node name="StartGameButton" type="Button" parent="UILayer/UIRoot/CenterContainer/PanelContainer/MainContent"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Start"
+
+[node name="HighscoresButton" type="Button" parent="UILayer/UIRoot/CenterContainer/PanelContainer/MainContent"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Highscores"

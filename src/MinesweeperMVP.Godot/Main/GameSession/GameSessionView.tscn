@@ -1,0 +1,113 @@
+[gd_scene load_steps=5 format=3 uid="uid://fq61vt6ek03q"]
+
+[ext_resource type="Script" uid="uid://ba4i5cpace1ui" path="res://Main/GameSession/GameSessionView.cs" id="1_6b1nt"]
+[ext_resource type="PackedScene" uid="uid://bhgwi633hr6sj" path="res://Main/GameSession/Minefield/MinefieldView.tscn" id="2_22p5k"]
+[ext_resource type="Theme" uid="uid://cjmmsi2fu2c56" path="res://Common/MainTheme.tres" id="2_coobl"]
+[ext_resource type="PackedScene" uid="uid://d1ehc223djpd1" path="res://Main/GameSession/SessionEndNotification.tscn" id="3_22p5k"]
+
+[node name="GameSessionView" type="Node"]
+script = ExtResource("1_6b1nt")
+
+[node name="UILayer" type="CanvasLayer" parent="."]
+
+[node name="UIRoot" type="Control" parent="UILayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme = ExtResource("2_coobl")
+
+[node name="CenterContainer" type="CenterContainer" parent="UILayer/UIRoot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="UILayer/UIRoot/CenterContainer"]
+layout_mode = 2
+mouse_filter = 1
+
+[node name="MainContent" type="VBoxContainer" parent="UILayer/UIRoot/CenterContainer/PanelContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="UILayer/UIRoot/CenterContainer/PanelContainer/MainContent"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="UILayer/UIRoot/CenterContainer/PanelContainer/MainContent/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="HBoxContainer" type="VBoxContainer" parent="UILayer/UIRoot/CenterContainer/PanelContainer/MainContent/PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="MinesLeftLabel" type="Label" parent="UILayer/UIRoot/CenterContainer/PanelContainer/MainContent/PanelContainer/MarginContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Mines left: 0"
+
+[node name="SpaceFiller" type="Control" parent="UILayer/UIRoot/CenterContainer/PanelContainer/MainContent/PanelContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TimerLabel" type="Label" parent="UILayer/UIRoot/CenterContainer/PanelContainer/MainContent/PanelContainer/MarginContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Timer: 0s"
+
+[node name="InvisibleSeparator" type="Control" parent="UILayer/UIRoot/CenterContainer/PanelContainer/MainContent"]
+custom_minimum_size = Vector2(0, 5)
+layout_mode = 2
+
+[node name="PanelContainer2" type="PanelContainer" parent="UILayer/UIRoot/CenterContainer/PanelContainer/MainContent"]
+layout_mode = 2
+mouse_filter = 1
+
+[node name="NegativeMarginContainer" type="MarginContainer" parent="UILayer/UIRoot/CenterContainer/PanelContainer/MainContent/PanelContainer2"]
+layout_mode = 2
+theme_override_constants/margin_left = -10
+theme_override_constants/margin_top = -10
+theme_override_constants/margin_right = -10
+theme_override_constants/margin_bottom = -10
+
+[node name="MinefieldView" parent="UILayer/UIRoot/CenterContainer/PanelContainer/MainContent/PanelContainer2/NegativeMarginContainer" instance=ExtResource("2_22p5k")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="UILayer/UIRoot/CenterContainer/PanelContainer/MainContent/PanelContainer2/NegativeMarginContainer/MinefieldView"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SessionEndNotification" parent="UILayer/UIRoot/CenterContainer/PanelContainer/MainContent/PanelContainer2/NegativeMarginContainer/MinefieldView/CenterContainer" instance=ExtResource("3_22p5k")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+
+[node name="InvisibleSeparator2" type="Control" parent="UILayer/UIRoot/CenterContainer/PanelContainer/MainContent"]
+custom_minimum_size = Vector2(0, 5)
+layout_mode = 2
+
+[node name="RestartButton" type="Button" parent="UILayer/UIRoot/CenterContainer/PanelContainer/MainContent"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Restart"
+
+[node name="QuitToMenuButton" type="Button" parent="UILayer/UIRoot/CenterContainer/PanelContainer/MainContent"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Quit to menu"
