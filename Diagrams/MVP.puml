@@ -1,0 +1,17 @@
+@startuml MVP
+skinparam Shadowing true
+skinparam Class {
+    BackgroundColor AntiqueWhite
+}
+
+class Presenter
+interface IView
+class Model
+
+IView .up.> Presenter
+Presenter -down-> Model
+
+Presenter -down-> IView
+Model .up.> Presenter
+
+@enduml

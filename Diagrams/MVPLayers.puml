@@ -1,0 +1,30 @@
+@startuml MVPLayers
+skinparam Shadowing true
+skinparam Class {
+    BackgroundColor AntiqueWhite
+}
+
+package Application {
+    interface IView
+}
+package Domain {
+    class Model
+}
+package Application {
+    class Presenter
+}
+package Godot {
+    class View
+    class Node
+}
+
+Model .left.> Presenter
+IView .right.> Presenter
+
+Presenter -right-> Model
+Presenter -left-> IView
+
+IView .down.|> View
+Node -right-|> View
+
+@enduml

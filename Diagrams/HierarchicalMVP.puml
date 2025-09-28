@@ -1,0 +1,36 @@
+@startuml HMVP
+skinparam Shadowing true
+skinparam Class {
+    BackgroundColor AntiqueWhite
+}
+
+package Parent {
+    interface IView
+    class Model
+    class Presenter
+
+    Model .left.> Presenter
+    IView .right.> Presenter
+
+    Presenter -right-> Model
+    Presenter -left-> IView 
+}
+
+package Child {
+    class Model
+    interface IView
+    class Presenter
+
+    Model .left.> Presenter
+    IView .right.> Presenter
+
+    Presenter -right-> Model
+    Presenter -left-> IView
+}
+
+Parent.IView --> Child.IView #Red : Create\lGet\nAdd\nFinalize
+Parent.Presenter --> Child.Presenter #Red : Create\lFinalize
+Parent.Model --> Child.Model
+Parent.Model <.. Child.Model
+
+@enduml
