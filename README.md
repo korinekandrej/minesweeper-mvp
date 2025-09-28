@@ -120,6 +120,7 @@ The advantage of having a Bootstrapper in the Godot project is that we can take 
 > [!TIP]
 > Use `ProjectSettings.GlobalizePath("user://");` to get the folder where Godot games save user specific data and pass it into App's constructor. Then App can save files in there. This will keep your program in line with other Godot programs.
 
+<!--
 ## Commands, Services and Stores
 
 In addition to Views and Models, Presenters interact with these classes:
@@ -137,6 +138,7 @@ In contrast there is the MinefieldSettingsModel, which is not a Store, because i
 > The MenuPresenter interacts only with a NavigationStore (see [Navigation](#navigation)).
 >
 > The Presenter is just a mediator between a View and something else, which can be a Model, Store, combination of both, or even multiple Models or Stores.
+-->
 
 ## Navigation
 
@@ -154,6 +156,7 @@ Usually the NavigationService is encapsulated in a NavigateCommand.
 > [!TIP]
 > As seen in the project, MainView can also manage View transition animation (fade in/out).
 
+<!--
 ## Saving and Repositories
 
 ## Hello World
@@ -162,7 +165,7 @@ Lets have a HelloWorldView scene. It is set as the Main scene. The Label and But
 
 App class is an autoload.
 
-<!--
+
 ### Triad categories
 
 The following categories are not reflected in the class structure.
